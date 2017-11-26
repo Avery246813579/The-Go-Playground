@@ -11,6 +11,7 @@ import (
 
 func main() {
 	mysqlTest()
+	routeTest()
 }
 
 func routeTest() {
@@ -65,6 +66,8 @@ func GetPeople(w http.ResponseWriter, r *http.Request) {
 
 	json.NewEncoder(w).Encode(kid)
 }
-func GetPerson(w http.ResponseWriter, r *http.Request)    {}
+func GetPerson(w http.ResponseWriter, r *http.Request)    {
+	w.Write([]byte("<html><body><h1>Hi</h1></body></html>"))
+}
 func CreatePerson(w http.ResponseWriter, r *http.Request) {}
 func DeletePerson(w http.ResponseWriter, r *http.Request) {}
